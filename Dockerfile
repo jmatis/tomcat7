@@ -7,7 +7,7 @@ RUN wget -nv http://mirrors.ukfast.co.uk/sites/ftp.apache.org/tomcat/tomcat-7/v7
 # create symlink
 RUN ln -s /opt/apache-tomcat-7.0.53/ /opt/tomcat
 
-# grab su[ervisor config for tomcat
+# grab supervisor config for tomcat
 RUN wget -nv https://raw.githubusercontent.com/jmatis/tomcat7/master/supervisord-tomcat.conf -O /etc/supervisor/conf.d/tomcat.conf
 
 # add start script
