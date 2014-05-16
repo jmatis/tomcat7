@@ -15,7 +15,7 @@ RUN wget -nv https://raw.githubusercontent.com/jmatis/tomcat7/master/tomcat-supe
 RUN chown root:root /opt/tomcat-supervisor.sh
 RUN chmod 700 /opt/tomcat-supervisor.sh
 
+# export ssh adn tomcat's port
+EXPOSE 22 8080
 
-# export tomcat's port
-EXPOSE 8080
-
+CMD ["/usr/bin/supervisord"]
